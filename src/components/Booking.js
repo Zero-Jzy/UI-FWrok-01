@@ -37,18 +37,47 @@ const Booking = ({ onClose, visible, form }) => {
     setDaysPicked(newDaysPicked)
   }
 
+  let _myTimePicker = () => {
+    return (
+      <div className="fwork-select-time-box">
+        <Row>
+          <Col span={12}>
+            <span> Ngày bắt đầu</span>
+            <DatePicker className="fwork-date-picker"
+            />
+          </Col>
+          <Col span={12}>
+            <span> Giờ bắt đầu</span>
+            <TimePicker format="HH:mm" use12Hours className="fwork-time-picker"
+            />
+          </Col>
+          <Col span={12}>
+            <span> Ngày kết thúc</span>
+            <DatePicker className="fwork-date-picker"
+            />
+          </Col>
+          <Col span={12}>
+            <span> Giờ kết thúc</span>
+            <TimePicker format="HH:mm" use12Hours className="fwork-time-picker"
+            />
+          </Col>
+        </Row>
+      </div>
+    )
+  }
+
   const renderTime = (key) => {
     switch (key) {
 
       case 1:
         return (
           <div className="fwork-time-periodic-pick">
-            <MyTimePicker />
+            {_myTimePicker()}
           </div>)
       case 2:
         return (
           <div className="fwork-time-periodic-pick">
-            <MyTimePicker />
+            (_myTimePicker())
             <div className="fwork-day-repeats">
               <span>Chọn ngày lặp:</span>
               <Checkbox.Group style={{ width: '100%' }}>
@@ -70,11 +99,11 @@ const Booking = ({ onClose, visible, form }) => {
               <Col span={8} className="fwork-month-time-picker">
                 <div>
                   <span> Giờ bắt đầu</span>
-                  <TimePicker format="HH:mm" placeholder="" className="fwork-time-picker" />
+                  <TimePicker format="HH:mm" placeholder="" use12Hours className="fwork-time-picker" />
                 </div>
                 <div>
                   <span> Giờ kết thúc</span>
-                  <TimePicker format="HH:mm" placeholder="" className="fwork-time-picker"
+                  <TimePicker format="HH:mm" placeholder="" use12Hours className="fwork-time-picker"
                   />
                 </div>
               </Col>
@@ -93,7 +122,7 @@ const Booking = ({ onClose, visible, form }) => {
                   <span style={{ marginLeft: 10 }}>Chọn ngày lặp</span>
                 </div>
                 <div className="fwork-list-day-picked">
-                  {daysPicked.sort((a,b) => a-b).map(day =>
+                  {daysPicked.sort((a, b) => a - b).map(day =>
                     <div className="fwork-day-picked">{day}</div>
                   )}
                 </div>
@@ -188,7 +217,7 @@ const Booking = ({ onClose, visible, form }) => {
                 >
                   <div className="fwork-one-time">
                     <Radio value={1}>Book 1 lần</Radio>
-                    {typeTime === 1 && <MyTimePicker />}
+                    {typeTime === 1 && _myTimePicker()}
                   </div>
                   <div className="fwork-periodic-box">
                     <div className="fwork-periodic">
@@ -258,38 +287,9 @@ const Booking = ({ onClose, visible, form }) => {
                 description="Booking của bạn đã hoàn thành."
               />
             </Steps>
-            </div>
+          </div>
         </Form>
       </Drawer>
-    </div>
-  )
-}
-
-function MyTimePicker() {
-  return (
-    <div className="fwork-select-time-box">
-      <Row>
-        <Col span={12}>
-          <span> Ngày bắt đầu</span>
-          <DatePicker className="fwork-date-picker"
-          />
-        </Col>
-        <Col span={12}>
-          <span> Giờ bắt đầu</span>
-          <TimePicker format="HH:mm" placeholder="" className="fwork-time-picker"
-          />
-        </Col>
-        <Col span={12}>
-          <span> Ngày kết thúc</span>
-          <DatePicker className="fwork-date-picker"
-          />
-        </Col>
-        <Col span={12}>
-          <span> Giờ kết thúc</span>
-          <TimePicker format="HH:mm" className="fwork-time-picker"
-          />
-        </Col>
-      </Row>
     </div>
   )
 }

@@ -11,23 +11,6 @@
       th {
         width: 40%;
       }
-
-      .fwork-list-service-tag {
-        display: flex;
-        flex-wrap: wrap;
-        .fwork-tag {
-          font-size: 14px;
-          display: inline-block;
-          background-color: #f5f6f8;
-          margin: 0 6px;
-          padding: 2px 12px;
-          border-radius: 14px;
-        }
-      }
-      .fwork-color-picked {
-        width: 16px;
-        height: 16px;
-      }
     }
 
     .fwork-btn-content-resource {
@@ -43,8 +26,4 @@
   .ant-drawer-body {
     padding: 0;
   }
-}
-
-.ant-drawer {
-  margin-top: 56px;
 }

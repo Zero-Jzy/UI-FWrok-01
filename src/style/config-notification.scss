@@ -1,0 +1,101 @@
+.fwork-config-notification {
+
+  color: #172b4d;
+  .ant-drawer-body {
+    padding: 0;
+  }
+
+  .fwork-config-notification-body {
+    padding: 0 32px;
+  }
+
+  .fwork-config-notifi-checkbox {
+    display: flex;
+    flex-direction: column;
+    .ant-checkbox-wrapper {
+      margin: 0;
+    }
+  }
+
+  .fwork-config-notification-desc > p{
+    font-size: 14px;
+    color: #172b4d;
+  }
+
+  table {
+    // border: 0;
+    th {
+      padding-left: 16px;
+    }
+
+    thead {
+      line-height: 48px;
+      background: #f5f6f8;
+    }
+    width: 100%;
+    tr {
+      height: 90px;
+
+      &:last-child {
+        th,td {
+          border-bottom: none;
+        }
+      }
+
+      th,td {
+        border-bottom: solid 1px #eaecef;
+        vertical-align: top;
+        padding-top: 10px;
+      }
+
+      th {
+        font-size: 14px;
+        font-weight: 600;
+        padding-top: 0;
+        padding-top: 10px;
+      }
+      td {
+        ul {
+          padding: 0;
+          margin: 0;
+          li {
+            list-style: none;
+            position: relative;
+            padding-left: 16px;
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 3px;
+              top: 48%;
+              transform: translateY(-50%);
+              border-radius: 50%;
+              width: 6px;
+              height: 6px;
+              background: #67748a;
+            }
+          }
+        }
+         
+        font-size: 14px;
+        &:nth-child(2){
+          width: 40%;
+          // background-color: black ;
+        }
+  
+        &:last-child{
+          width: 20%;
+        }
+        .ant-checkbox + span {
+          font-size: 14px;
+          color: #172b4d;
+        }
+      }
+    }
+  }
+
+  .fwork-footer-drawer {
+    margin: 30px 0;
+  }
+ 
+}

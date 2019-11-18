@@ -29,15 +29,25 @@
   .ant-form-vertical .ant-form-item {
     padding-bottom: 0;
   }
+}
 
-  .fwork-btn-ok {
-    background-color: #266bd3;
+
+.fwork-btn-ok {
+  background-color: #266bd3;
+  color: white;
+}
+
+.fwork-btn-ok {
+  &:hover, &:focus {
+    background-color: #417bd2;
     color: white;
   }
+}
 
-  .fwork-btn-cancel {
-    margin-left: 8px;
-  }
+.fwork-btn-cancel {
+  margin-left: 8px;
+  // background-color: #d71d31;
+  // color: white;
 }
 
 .fwork-custom-header-drawer {
@@ -46,6 +56,9 @@
   padding: 16px 32px;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+    z-index: 1;
+    top: 0;
 
   span {
     font-size: 20px;
@@ -60,6 +73,16 @@
       margin: 0 14px;
       cursor: pointer;
     }
+  }
+}
+
+.fwork-custom-body-drawer {
+  padding: 24px 32px;
+  .fwork-sub-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #172b4d;
+    margin-bottom: 24px;
   }
 }
 
@@ -89,6 +112,20 @@
       color: #3a4b68 !important;
     }
   }
+
+  .ant-steps-item-finish {
+    .ant-steps-item-tail::after{
+      background-color: #e8e8e8;
+    }
+    .ant-steps-item-icon {
+      background: #266bd3;
+      border-color: #266bd3;
+      .ant-steps-icon {
+        color: white;
+      }
+    }
+  }
+
   .ant-steps-item-active {
     .ant-steps-item-icon {
       background: #266bd3;
@@ -105,6 +142,74 @@
   }
  }
 
+ .fwork-custom-step.color-2 {
+  .ant-steps-item-active {
+    .ant-steps-item-icon {
+      background: #069662;
+      border-color: #069662;
+    }
+  }
+
+  .ant-steps-item-finish {
+    .ant-steps-item-icon {
+      background: #069662;
+      border-color: #069662;
+      .ant-steps-icon {
+        color: white;
+      }
+    }
+  }
+ }
+
+.fwork-list-service-tag {
+  .fwork-tag {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #f5f6f8;
+    margin: 0 12px 4px 0;
+    padding: 2px 12px;
+    border-radius: 14px;
+  }
+}
+
+.fwork-custom-tabs {
+  .ant-tabs-tab {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 0;
+    color: #97a0af;
+  }
+
+  .ant-tabs-tab-active {
+    color: #266bd3;
+  }
+  .ant-tabs-ink-bar {
+    height: 2px;
+  } 
+}
+
+.fwork-footer-booking-detail {
+    padding-bottom: 56px;
+
+  .fwork-list-comment {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.fwork-btn-link {
+  margin-bottom: 8px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+
+.fwork-color-picked {
+  width: 16px;
+  height: 16px;
+}
+
 
 .d-none {
   display: none;
@@ -112,4 +217,8 @@
 
 .p-0 {
   padding: 0;
+}
+
+.m-l {
+  margin-left: .5rem;
 }

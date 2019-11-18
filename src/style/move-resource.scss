@@ -1,0 +1,46 @@
+
+.fwork-move-resource-drawer {
+  .ant-drawer-header {
+    border-bottom: none;
+    background-color: #f5f6f8;
+    .ant-drawer-title {
+      font-size: 20px;
+    }
+  }
+
+  .fwork-tranfer-custom {
+    .ant-transfer-list {
+      width: 46%;
+    }
+
+    .ant-transfer-list-header {
+      display: none;
+    }
+
+    .ant-transfer-list {
+      padding: 0;
+      border: solid 1px #dcdfe4;
+
+      .ant-transfer-list-body-with-search {
+        padding-top: 44px;
+      }
+
+
+      .ant-transfer-list-body-search-wrapper {
+        height: 44px;
+        padding: 0;
+        .ant-transfer-list-search {
+          height: 44px;
+          border: none;
+          &:focus {
+          }
+        }
+
+        .ant-transfer-list-search-action {
+          bottom: 5px;
+          right: 6px;
+        }
+      }
+    }
+  }
+}
