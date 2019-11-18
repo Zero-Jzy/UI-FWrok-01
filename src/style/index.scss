@@ -1,0 +1,115 @@
+.fwork-form {
+  height: 100%;
+ .ant-form-item-label {
+   label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #172b4d;
+   }
+ }
+  .ant-radio-inner {
+    border-color: #020203;
+    &:after {
+      background-color: #266bd3;
+      top: 2px;
+      left: 2px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .ant-form-item-required {
+    &:before {
+      position: absolute;
+      top: 0;
+      right: -14px;
+    }
+  }
+
+  .ant-form-vertical .ant-form-item {
+    padding-bottom: 0;
+  }
+
+  .fwork-btn-ok {
+    background-color: #266bd3;
+    color: white;
+  }
+
+  .fwork-btn-cancel {
+    margin-left: 8px;
+  }
+}
+
+.fwork-custom-header-drawer {
+  height: 56px;
+  background-color: #f5f6f8;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: 20px;
+    margin: 0;
+    color: #172b4d;
+  }
+
+  .fwork-header-action {
+    font-size: 16px;
+    color: #67748a;
+    i {
+      margin: 0 14px;
+      cursor: pointer;
+    }
+  }
+}
+
+.fwork-custom-checkbox {
+  .ant-checkbox-checked {
+    .ant-checkbox-inner {
+      background-color: #266bd3;
+      &:after {
+        border:  1px solid #fff;
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+  }
+ }
+
+ .fwork-custom-step {
+  .ant-steps-item {
+    height: 85px;
+    .ant-steps-item-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #172b4d !important;
+    }
+    .ant-steps-item-description {
+      font-size: 12px;
+      color: #3a4b68 !important;
+    }
+  }
+  .ant-steps-item-active {
+    .ant-steps-item-icon {
+      background: #266bd3;
+      border-color: #266bd3;
+    }
+  }
+
+  .ant-steps-item-wait {
+    .ant-steps-item-icon {
+      > span {
+        color: black;
+      }
+    }
+  }
+ }
+
+
+.d-none {
+  display: none;
+}
+
+.p-0 {
+  padding: 0;
+}

@@ -1,0 +1,225 @@
+.fwork-booking-drawer {
+  color: #172b4d;
+  .fwork-form {
+    display: flex;
+
+  }
+  .ant-drawer-header {
+    border-bottom: none;
+    background-color: #f5f6f8;
+    .ant-drawer-title {
+      font-size: 20px;
+    }
+  }
+
+  .ant-form-item-label {
+    padding: 0 0 4px; 
+  }
+
+  .ant-form-item {
+    padding-bottom: 0;
+  }
+
+  .ant-drawer-wrapper-body {
+    height: 100%;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+  }
+
+  .fwork-booking-left-content, 
+  .fwork-booking-rigth-content {
+    padding: 24px 32px;
+    // height: 100%;
+  }
+
+  .fwork-booking-content-title {
+    text-transform: uppercase;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .fwork-booking-left-content {
+    width: 66.666666666%;
+  }
+
+  .fwork-booking-rigth-content {
+    width: 33.3333333333%;
+    background-color: #fafbfb;
+    min-height: calc(100vh - 110px);
+  }
+
+  .fwork-select-time-box {
+    .ant-col {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px 0;
+      &:nth-child(odd) {
+        padding-left: 22px;
+        padding-right: 12px;
+      }
+      &:nth-child(even) {
+        padding-right: 71px;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  input[type='text']:read-only {
+    background: #f5f6f8;
+    color: #97a0af;
+  }
+
+   .fwork-choose-time-booking {
+    width: 100%;
+
+    .fwork-time-periodic-pick {
+      border-top: 1px dotted rgba(0, 0, 0, 0.15);
+      padding-top: 16.5px;
+    }
+
+    .fwork-periodic-box {
+      .fwork-select-time-box {
+        .ant-col {
+          &:nth-child(odd) {
+            padding-left: 0;
+            padding-right: 12px;
+          }
+          &:nth-child(even) {
+            padding-right: 71px;
+            padding-left: 10px;
+          }
+        }
+      }
+
+      .fwork-periodic {
+        margin: .5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .ant-select {
+          width: 128px;
+        }
+      }
+      .fwork-day-repeats {
+        .ant-checkbox-group {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: space-between;
+          .ant-checkbox-wrapper {
+            margin: 0;
+          }
+        }
+       
+      }
+    }
+
+    .fwork-month-time-picker {
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4px 0;
+      }
+    }
+
+    .fwork-select-day {
+      width: 32px;
+      height: 32px !important;
+      cursor: pointer;
+      // opacity: 0;
+      .ant-select-selection {
+        max-height: 32px;
+      }
+      .ant-select-selection__rendered {
+        opacity: 0;
+        max-height: 0 !important;
+      }
+    }
+    
+  }
+
+  .fwork-date-picker {
+    width: 128px;
+  }
+
+  .fwork-time-picker {
+    width: 89px;
+  }
+
+  .fwork-footer {
+    margin: 30px 0;
+    padding-bottom: 30px;
+  }
+
+  .fwork-pick-day-box {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    
+    > div {
+      margin: 4px 0;
+    }
+
+    .fwork-list-day-picked {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 36px;
+      .fwork-day-picked {
+        width: 32px;
+        height: 32px;
+        margin: 4px;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 50%;
+        background-color: #f5f6f8;
+      }
+    }
+  }
+}
+
+.fwork-custom-pick-day {
+  width: 208px !important;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 4px;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 168px;
+    li {
+      display: block;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      margin: 2px;
+      padding: 0 !important;
+      // color: rgba(0, 0, 0, 0.65);
+      line-height: 22px;
+      text-align: center;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      -webkit-transition: background 0.3s ease;
+      transition: background 0.3s ease;
+      &:hover{
+        border: 1px solid #266bd3;
+        background-color: #e6f7ff;
+      }
+      i {
+        display: none !important;
+      }
+    }
+    li.active {
+      border: 1px solid #266bd3;
+      background-color: #e6f7ff;
+    }
+  }
+}

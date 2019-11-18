@@ -1,0 +1,36 @@
+.fwork-booking-detail-drawer {
+  color: #172b4d;
+  .ant-drawer-header {
+    border-bottom: none;
+    background-color: #f5f6f8;
+    .ant-drawer-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+  }
+
+  .fwork-booking-detail-content {
+    display: flex;
+  }
+
+  .fwork-booking-detail-left-content, 
+  .fwork-booking-detail-rigth-content {
+    padding: 24px 32px;
+    // height: 100%;
+  }
+
+  .fwork-booking-detail-left-content {
+    width: 66.666666666%;
+  }
+
+  .fwork-booking-detail-rigth-content {
+    width: 33.3333333333%;
+    background-color: #fafbfb;
+    min-height: calc(100vh - 110px);
+  }
+
+}
